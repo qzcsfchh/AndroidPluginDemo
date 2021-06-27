@@ -1,0 +1,3 @@
+include ':filesizer'
+include ':app'
+rootProject.name = "AndroidPluginKit"

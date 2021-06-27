@@ -1,0 +1,42 @@
+apply plugin: 'groovy'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.google.code.gson:gson:2.8.5'
+}
+
+//sourceCompatibility = "1.7"
+//targetCompatibility = "1.7"
+
+group 'io.github.qzcsfchh.plugin'
+version '1.0.0'
+
+apply plugin: 'maven'
+
+//install{
+//    repositories.mavenInstaller {
+//        //通过pom配置自定义插件的group、artifact和version，通过classpath引用自定义插件时为：groupId:artifactId:version
+//        pom{
+//            groupId = 'me.hao.plugin'
+//            artifactId = 'custom_task'
+//            version = '1.0.0'
+//        }
+//        println "classpath \'${}:${}:${}\'"
+//    }
+//}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../repo'))
+//        pom.groupId = group
+//        pom.artifactId = name
+//        pom.version = version
+
+    }
+
+    doLast{
+        def pom = repositories.mavenDeployer.pom
+        println "classpath \'${pom.groupId}:${pom.artifactId}:${pom.version}\'"
+    }
+}
