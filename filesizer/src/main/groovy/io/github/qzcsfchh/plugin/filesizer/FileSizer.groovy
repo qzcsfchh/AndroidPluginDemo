@@ -7,7 +7,7 @@ class FileSizer {
 
 
     @Override
-    public String toString() {
+    String toString() {
         return "FileSizer{" +
                 "includeCode=" + includeCode +
                 ", includeResource=" + includeResource +

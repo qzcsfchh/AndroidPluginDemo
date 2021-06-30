@@ -1,12 +1,12 @@
 package io.github.qzcsfchh.plugin.transformer
 
-public class Transformer {
+class Transformer {
 
     boolean  enableTransformer
 
 
     @Override
-    public String toString() {
+    String toString() {
         return "Transformer{" +
                 "enableTransformer=" + enableTransformer +
                 '}';

@@ -6,6 +6,7 @@ dependencies {
     implementation gradleApi()
     implementation localGroovy()
     implementation "com.android.tools.build:gradle:4.0.1"
+    implementation 'org.javassist:javassist:3.28.0-GA'
 }
 
 group 'io.github.qzcsfchh.plugin'
